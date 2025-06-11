@@ -35,31 +35,40 @@ const FormList: React.FC<Props> = ({ form }) => {
   }
  
   return (
-    <div>
-      <Card className="w-[350px]">
-        <CardHeader>
-          <CardTitle>{form.content.formTitle}</CardTitle>
-          <CardDescription>
-            Deploy your new project in one-click.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Link href={`/dashboard/forms/${form.id}/submissions`}>
-            {" "}
-            <Button variant={"link"} className="text-blue-600">
-              Submission - {form.submissions}
-            </Button>{" "}
-          </Link>
-        </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={()=> router.push(`/dashboard/forms/edit/${form.id}`)}>
-            <Edit2 /> Edit
+  <div className="w-full sm:w-[350px]">
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle className="truncate">{form.content.formTitle}</CardTitle>
+        <CardDescription>
+          Deploy your new project in one-click.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Link href={`/dashboard/forms/${form.id}/submissions`}>
+          <Button variant={"link"} className="text-blue-600 p-0">
+            Submission - {form.submissions}
           </Button>
-          <Button onClick={()=> deleteFormHandler(form.id)} variant={"destructive"}>Delete</Button>
-        </CardFooter>
-      </Card>
-    </div>
-  );
+        </Link>
+      </CardContent>
+      <CardFooter className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+        <Button
+          variant="outline"
+          className="w-full sm:w-auto"
+          onClick={() => router.push(`/dashboard/forms/edit/${form.id}`)}
+        >
+          <Edit2 /> Edit
+        </Button>
+        <Button
+          onClick={() => deleteFormHandler(form.id)}
+          variant={"destructive"}
+          className="w-full sm:w-auto"
+        >
+          Delete
+        </Button>
+      </CardFooter>
+    </Card>
+  </div>
+);
 };
 
 export default FormList;

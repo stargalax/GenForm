@@ -6,12 +6,19 @@ import {
   CardTitle,
 } from "./ui/card"; 
 import { Eye } from "lucide-react";
+import {
+  SidebarFooter,
+} from "./ui/sidebar";
+import UpgradeButton from "./UpgradeButton";
+import { currentUser } from "@clerk/nextjs/server";
 
 type Props = {
   noOfSubmissions:number;
 }
 
-const Analytics : React.FC<Props> = ({noOfSubmissions}) => {
+const Analytics : React.FC<Props> = async ({noOfSubmissions}) => {
+  const user = await currentUser();
+
   return (
     <div>
       <Card className="w-[350px] shadow-md shadow-yellow-600">
@@ -24,6 +31,9 @@ const Analytics : React.FC<Props> = ({noOfSubmissions}) => {
           <p>Total submissions to your forms.</p>
         </CardContent>
       </Card>
+      <SidebarFooter>
+        <UpgradeButton userId={user?.id}/>
+      </SidebarFooter>
     </div>
   );
 };
