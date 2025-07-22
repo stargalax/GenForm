@@ -4,7 +4,8 @@
 In the digital age, creating forms should be quick, smart, and intuitive. Enter **GenForm AI**, an AI-powered SaaS solution that automates form generation, helping you save time and focus on what truly matters—your data and insights. GenForm.AI is a generative AI SaaS platform for automatic form generation, powered by large language models (LLMs).🚀
 
 ---
-🔗 **Live Website**: [https://genform-8x4o.onrender.com/](https://genform-8x4o.onrender.com/)  
+🔗 **Live Website**: [https://genform-8x4o.onrender.com/](https://genformai-kappa.vercel.app/ ) 
+🔗 **Live Website**: [https://genform-8x4o.onrender.com/](https://genform-8x4o.onrender.com/) 
 📂 **GitHub Repository**: [github.com/Amansingh0807/GenForm](https://github.com/Amansingh0807/GenForm)
 
 ---
