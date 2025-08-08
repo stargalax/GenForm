@@ -19,7 +19,7 @@ export const pricingPlan : PricingPlan[]= [
 },
 {
     level : "Pro",
-    price : "$29/month",
+    price : "$15/month",
     services :[
         "Unlimited credits",
         "Basic Supports",
@@ -28,8 +28,8 @@ export const pricingPlan : PricingPlan[]= [
     ]
 },
 {
-    level : "Enterprice",
-    price : "$100/month",
+    level : "Enterprise",
+    price : "$50/month",
     services :[
         "Unlimited credits",
         "Full Supports",

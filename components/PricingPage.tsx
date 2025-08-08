@@ -93,15 +93,17 @@ const PricingPage: React.FC<Props> = ({ userId }) => {
               <CardFooter>
                 <Button
                   variant={plan.level === "Enterprise" ? "default" : "outline"}
-                  className={`${
-                    plan.level === "Enterprise" ? "text-black bg-white hover:bg-gray-100" : ""
-                  } w-full`}
+                  className={`w-full ${
+                    plan.level === "Enterprise" 
+                      ? "text-black bg-white hover:bg-gray-100 dark:text-black dark:bg-white dark:hover:bg-gray-100" 
+                      : "bg-white text-black border-gray-300 hover:bg-gray-50 dark:bg-white dark:text-black dark:border-gray-300 dark:hover:bg-gray-50"
+                  }`}
                   onClick={() =>
                     checkoutHandler(
                       plan.level === "Pro"
-                        ? 29
+                        ? 15
                         : plan.level === "Enterprise"
-                        ? 70
+                        ? 50
                         : 0,
                       plan.level
                     )
