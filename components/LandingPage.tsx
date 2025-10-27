@@ -44,7 +44,7 @@ const LandingPage = ({ userId }: LandingPageProps) => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-              <Link href={userId ? "/dashboard" : "/sign-up"}>
+              <Link href={userId ? "/dashboard/analytics" : "/sign-up"}>
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 via-green-600 to-cyan-600 hover:from-blue-700 hover:via-green-700 hover:to-cyan-700 text-white px-8 py-6 text-lg shadow-lg shadow-blue-500/50">
                   {userId ? "Go to Dashboard" : "Start Creating Free"}
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -210,10 +210,10 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold">
-                    JD
+                    MR
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">John Doe</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Micheal Ross</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Product Manager</div>
                   </div>
                 </div>
@@ -230,10 +230,10 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold">
-                    AS
+                    TH
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Alice Smith</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Tarry Hanie</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Marketing Director</div>
                   </div>
                 </div>
@@ -250,10 +250,10 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
-                    MJ
+                    SD
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white">Mike Johnson</div>
+                    <div className="font-semibold text-gray-900 dark:text-white">Soudip Das</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Business Owner</div>
                   </div>
                 </div>

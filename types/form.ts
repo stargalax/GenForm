@@ -1,9 +1,11 @@
 export type Fields = {
+    id?:string;
     name?:string;
     label?:string;
     placeholder?:string;
     type?:string;
     options?:string[];
+    required?:boolean;
 }
 export type Content = { 
     formTitle:string;

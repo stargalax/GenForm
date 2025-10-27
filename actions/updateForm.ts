@@ -19,8 +19,11 @@ type FormData = {
 
 export const updateForm = async (formUuid: string, formData: FormData) => {
   try {
+    console.log("updateForm called with:", { formUuid, formData });
+    
     const user = await currentUser();
     if (!user) {
+      console.log("updateForm error: User not found");
       return { success: false, message: "User not found" };
     }
 
@@ -32,10 +35,12 @@ export const updateForm = async (formUuid: string, formData: FormData) => {
     });
 
     if (!existingForm) {
+      console.log("updateForm error: Form not found");
       return { success: false, message: "Form not found" };
     }
 
     if (existingForm.ownerId !== user.id) {
+      console.log("updateForm error: Unauthorized");
       return { success: false, message: "Unauthorized to edit this form" };
     }
 
@@ -52,6 +57,8 @@ export const updateForm = async (formUuid: string, formData: FormData) => {
       }))
     };
 
+    console.log("Updating form with cleaned data:", cleanedFormData);
+
     // Update the form
     const updatedForm = await prisma.form.update({
       where: {
@@ -61,6 +68,8 @@ export const updateForm = async (formUuid: string, formData: FormData) => {
         content: JSON.stringify(cleanedFormData),
       },
     });
+
+    console.log("Form updated successfully");
 
     revalidatePath(`/dashboard/forms/edit/${formUuid}`);
     revalidatePath('/dashboard/forms');
@@ -74,7 +83,7 @@ export const updateForm = async (formUuid: string, formData: FormData) => {
     console.error("Error updating form:", error);
     return {
       success: false,
-      message: "An error occurred while updating the form",
+      message: error.message || "An error occurred while updating the form",
     };
   }
 };
