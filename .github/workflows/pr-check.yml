@@ -1,0 +1,162 @@
+name: PR Compliance Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  check-compliance:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Check PR Template Compliance
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body || '';
+            const author = context.payload.pull_request.user.login;
+            
+            // Check if required sections are filled
+            const hasDescription = body.includes('## Description') && 
+                                   body.split('## Description')[1]?.split('##')[0]?.trim().length > 10;
+            const hasRelatedIssue = /Resolves #\d+|Fixes #\d+|Closes #\d+/.test(body);
+            const hasTypeChecked = /- \[x\].*Bug fix|New feature|Breaking change|Documentation|UI\/UX|Performance|refactoring|Test/.test(body);
+            const hasGuidelinesChecked = /- \[x\].*read the.*CONTRIBUTING/i.test(body);
+            const hasCodeReviewed = /- \[x\].*performed a self-review/i.test(body);
+            const hasAiDisclosure = /- \[x\].*Did you use AI tools/i.test(body) || /- \[ \].*Did you use AI tools/i.test(body);
+            
+            let issues = [];
+            let warnings = [];
+            
+            if (!hasDescription) {
+              issues.push('❌ **Missing Description**: Please provide a clear description of your changes');
+            }
+            
+            if (!hasRelatedIssue) {
+              warnings.push('⚠️ **Related Issue**: Consider linking an issue (e.g., "Resolves #123")');
+            }
+            
+            if (!hasTypeChecked) {
+              issues.push('❌ **Type of Change**: Please check at least one type of change');
+            }
+            
+            if (!hasGuidelinesChecked) {
+              issues.push('❌ **Contributing Guidelines**: Please confirm you have read CONTRIBUTING.md');
+            }
+            
+            if (!hasCodeReviewed) {
+              issues.push('❌ **Self Review**: Please perform a self-review of your code');
+            }
+            
+            if (!hasAiDisclosure) {
+              issues.push('❌ **AI Disclosure**: Please indicate whether you used AI tools (Yes/No checkbox)');
+            }
+            
+            // Check if this is a first-time contributor
+            const { data: prList } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              per_page: 100
+            });
+            
+            const authorPRs = prList.filter(pr => pr.user.login === author);
+            const isFirstPR = authorPRs.length === 1; // Only this PR exists
+            
+            // Build comment message
+            let comment = '';
+            
+            if (isFirstPR) {
+              comment += `## 🎉 Welcome to GenForm!\n\n`;
+              comment += `Hi @${author}! 👋 Thank you for opening your first pull request! We're excited to have you contribute to GenForm. `;
+              comment += `A maintainer will review your PR soon.\n\n`;
+              comment += `While you wait, please make sure your PR follows our guidelines below. 🚀\n\n`;
+              comment += `---\n\n`;
+            }
+            
+            if (issues.length > 0 || warnings.length > 0) {
+              comment += `## 📋 PR Checklist Review\n\n`;
+              comment += `Thank you for your contribution! Please address the following items:\n\n`;
+              
+              if (issues.length > 0) {
+                comment += `### Required Actions\n\n`;
+                issues.forEach(issue => {
+                  comment += `${issue}\n`;
+                });
+                comment += `\n`;
+              }
+              
+              if (warnings.length > 0) {
+                comment += `### Suggestions\n\n`;
+                warnings.forEach(warning => {
+                  comment += `${warning}\n`;
+                });
+                comment += `\n`;
+              }
+              
+              comment += `---\n\n`;
+              comment += `Please edit your PR description to complete all required items. `;
+              comment += `Once done, this check will automatically pass! ✅\n\n`;
+              comment += `Need help? Check out our [Contributing Guidelines](../CONTRIBUTING.md) or ask in the comments!`;
+              
+              // Post comment
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: comment
+              });
+              
+              // Set status check
+              if (issues.length > 0) {
+                core.setFailed('PR template compliance check failed. Please complete all required items.');
+              }
+            } else {
+              // Everything is good!
+              let successComment = '';
+              
+              if (isFirstPR) {
+                successComment += `## 🎉 Welcome to GenForm!\n\n`;
+                successComment += `Hi @${author}! 👋 Thank you for opening your first pull request! `;
+                successComment += `Your PR looks great and follows all our guidelines. `;
+                successComment += `A maintainer will review it soon. Welcome to the community! 🚀\n`;
+              } else {
+                successComment += `## ✅ PR Checklist Complete\n\n`;
+                successComment += `Great job @${author}! Your PR follows all the guidelines. `;
+                successComment += `A maintainer will review it soon. Thank you for your contribution! 🙏\n`;
+              }
+              
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: successComment
+              });
+            }
+
+      - name: Label first-time contributors
+        if: github.event.action == 'opened'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.pull_request.user.login;
+            
+            const { data: prList } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              creator: author,
+              per_page: 100
+            });
+            
+            if (prList.length === 1) {
+              await github.rest.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['first-time-contributor']
+              });
+            }

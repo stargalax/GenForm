@@ -1,0 +1,99 @@
+name: Auto Label PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  auto-label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Auto label based on files
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+
+            const labels = new Set();
+
+            for (const file of files) {
+              const path = file.filename;
+
+              // Documentation
+              if (path.match(/\.(md|mdx)$/i) || path.includes('docs/')) {
+                labels.add('documentation');
+              }
+
+              // Components/UI
+              if (path.includes('components/') || path.includes('ui/')) {
+                labels.add('ui/ux');
+              }
+
+              // Actions/Backend
+              if (path.includes('actions/') || path.includes('api/')) {
+                labels.add('backend');
+              }
+
+              // Database
+              if (path.includes('prisma/') || path.includes('schema')) {
+                labels.add('database');
+              }
+
+              // Tests
+              if (path.match(/\.(test|spec)\.(ts|tsx|js|jsx)$/i)) {
+                labels.add('tests');
+              }
+
+              // Styling
+              if (path.match(/\.(css|scss|sass)$/i) || path.includes('tailwind')) {
+                labels.add('styling');
+              }
+
+              // Configuration
+              if (path.match(/\.(json|yml|yaml|config)$/i) || path.includes('config')) {
+                labels.add('configuration');
+              }
+
+              // Dependencies
+              if (path === 'package.json' || path === 'package-lock.json') {
+                labels.add('dependencies');
+              }
+            }
+
+            // Add size labels based on changes
+            const additions = files.reduce((sum, file) => sum + file.additions, 0);
+            const deletions = files.reduce((sum, file) => sum + file.deletions, 0);
+            const totalChanges = additions + deletions;
+
+            if (totalChanges < 10) {
+              labels.add('size/XS');
+            } else if (totalChanges < 50) {
+              labels.add('size/S');
+            } else if (totalChanges < 200) {
+              labels.add('size/M');
+            } else if (totalChanges < 500) {
+              labels.add('size/L');
+            } else {
+              labels.add('size/XL');
+            }
+
+            // Apply labels
+            if (labels.size > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: Array.from(labels)
+              });
+            }

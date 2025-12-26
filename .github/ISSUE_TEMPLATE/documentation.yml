@@ -1,0 +1,97 @@
+name: 📚 Documentation
+description: Report an issue or suggest improvements to GenForm documentation
+title: "[Docs]: "
+labels: ["documentation", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve our documentation! Clear docs make GenForm better for everyone.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the documentation issue or improvement.
+      placeholder: Describe what's missing or needs improvement...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs attention?
+      options:
+        - README
+        - API Documentation
+        - Tutorial/Guide
+        - Code Comments
+        - Contributing Guidelines
+        - Setup/Installation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where is this documentation located? (Provide file name, URL, or section)
+      placeholder: "e.g., README.md section 'Getting Started'"
+    validations:
+      required: false
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What does the current documentation say? (if applicable)
+      placeholder: Current text or description...
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: Proposed Changes
+      description: What should be added, changed, or removed?
+      placeholder: |
+        Suggested improvements:
+        - Add section about...
+        - Clarify the explanation of...
+        - Fix typo in...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How critical is this documentation issue?
+      options:
+        - Low - Minor typo or formatting
+        - Medium - Unclear or incomplete information
+        - High - Missing critical information
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context or examples?
+      placeholder: Links, references, or examples...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
