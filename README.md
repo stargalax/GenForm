@@ -119,7 +119,7 @@
 ### Prerequisites
 ```bash
 Node.js 18.x or higher
-npm or yarn
+npm
 PostgreSQL database
 ```
 
@@ -235,27 +235,6 @@ AI Output:
 - View individual responses
 - Export data to CSV
 
----
-
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. **Commit your changes**
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. **Push to the branch**
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. **Open a Pull Request**
-
 ### 🌟 Don't forget to star this repo!
 
 ---
@@ -263,6 +242,18 @@ We welcome contributions! Here's how you can help:
 ## 📸 Screenshots
 
 ![GenForm Dashboard](https://github.com/Amansingh0807/GenForm/blob/master/public/Screenshot%202025-06-17%20154052.png)
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
+
+## 🛡️ Security
+
+If you discover any security-related issues, please refer to our [Security Policy](SECURITY.md).
 
 ---
 

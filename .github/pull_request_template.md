@@ -9,18 +9,19 @@ Resolves #
 
 ## Type of Change
 <!-- Mark the relevant option with an 'x' -->
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 💥 Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] 📚 Documentation update
-- [ ] 🎨 UI/UX improvement
-- [ ] ⚡ Performance improvement
-- [ ] ♻️ Code refactoring
-- [ ] ✅ Test update
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+- [ ] UI/UX improvement
+- [ ] Performance improvement
+- [ ] Code refactoring
+- [ ] Test update
 
 ## Checklist
 <!-- Mark completed items with an 'x'. All items must be completed before merging -->
 - [ ] I have read the [CONTRIBUTING.md](../CONTRIBUTING.md) guidelines
+- [ ] I have read the [CODE_OF_CONDUCT.md](../CODE_OF_CONDUCT.md)
 - [ ] My code follows the style guidelines of this project
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
