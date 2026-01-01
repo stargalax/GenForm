@@ -28,31 +28,46 @@ const LandingPage = ({ userId }: LandingPageProps) => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-300 mb-6 sm:mb-8">
               <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="text-xs sm:text-sm font-medium">AI-Powered Form Builder</span>
+              <span className="text-xs sm:text-sm font-medium">
+                AI-Powered Form Builder
+              </span>
             </div>
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 px-2">
               Create Forms in
-              <span className="text-green-500 dark:text-green-400"> Seconds</span>
+              <span className="text-green-500 dark:text-green-400">
+                {" "}
+                Seconds
+              </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
-              Transform your ideas into beautiful, functional forms with the power of AI.
-              No coding required.
+              Transform your ideas into beautiful, functional forms with the
+              power of AI. No coding required.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4">
-              <Link href={userId ? "/dashboard/analytics" : "/sign-up"} className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-lg shadow-green-500/30">
+              <Link
+                href={userId ? "/dashboard/analytics" : "/sign-up"}
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg shadow-lg shadow-green-500/30"
+                >
                   {userId ? "Go to Dashboard" : "Start Creating Free"}
                   <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
               </Link>
               <Link href="/dashboard/forms" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg border-green-500 text-green-500 hover:bg-green-50 dark:hover:bg-green-900/10">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg border-green-500 text-green-500 hover:bg-green-50 dark:hover:bg-green-900/10"
+                >
                   <Sparkles className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                   See Examples
                 </Button>
@@ -86,7 +101,10 @@ const LandingPage = ({ userId }: LandingPageProps) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
             {/* Feature 1 */}
-            <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300">
+            <div
+              className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50 transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mb-4">
                 <Zap className="w-7 h-7 text-white" />
               </div>
@@ -94,12 +112,16 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 AI-Powered Generation
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Describe your form in plain English and watch AI create it instantly with smart field suggestions.
+                Describe your form in plain English and watch AI create it
+                instantly with smart field suggestions.
               </p>
             </div>
 
             {/* Feature 2 */}
-            <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300">
+            <div
+              className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50 transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
@@ -107,12 +129,16 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 Secure & Reliable
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Enterprise-grade security with encrypted data storage. Your forms and submissions are always safe.
+                Enterprise-grade security with encrypted data storage. Your
+                forms and submissions are always safe.
               </p>
             </div>
 
             {/* Feature 3 */}
-            <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300">
+            <div
+              className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50  transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-teal-500 rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-7 h-7 text-white" />
               </div>
@@ -120,12 +146,16 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 Easy Sharing
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Share your forms anywhere with one click. WhatsApp, Email, LinkedIn, and more platforms supported.
+                Share your forms anywhere with one click. WhatsApp, Email,
+                LinkedIn, and more platforms supported.
               </p>
             </div>
 
             {/* Feature 4 */}
-            <div className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-green-500/10 transition-all duration-300">
+            <div
+              className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50 transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mb-4">
                 <Edit className="w-7 h-7 text-white" />
               </div>
@@ -133,12 +163,16 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 Fully Customizable
               </h3>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                Edit, add, remove, and reorder fields with ease. Make your forms exactly how you want them.
+                Edit, add, remove, and reorder fields with ease. Make your forms
+                exactly how you want them.
               </p>
             </div>
 
             {/* Feature 5 */}
-            <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300">
+            <div
+              className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50 transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-indigo-600 rounded-xl flex items-center justify-center mb-4">
                 <BarChart3 className="w-7 h-7 text-white" />
               </div>
@@ -146,12 +180,16 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 Analytics Dashboard
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Track submissions, analyze responses, and gain insights with our comprehensive analytics tools.
+                Track submissions, analyze responses, and gain insights with our
+                comprehensive analytics tools.
               </p>
             </div>
 
             {/* Feature 6 */}
-            <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-300">
+            <div
+              className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40
+ hover:shadow-md hover:shadow-gray-300/50 transition-all duration-300"
+            >
               <div className="w-14 h-14 bg-teal-500 rounded-xl flex items-center justify-center mb-4">
                 <Clock className="w-7 h-7 text-white" />
               </div>
@@ -159,7 +197,8 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 Save Time
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Create forms in seconds, not hours. Our AI understands your needs and builds forms instantly.
+                Create forms in seconds, not hours. Our AI understands your
+                needs and builds forms instantly.
               </p>
             </div>
           </div>
@@ -180,9 +219,12 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center mb-4">
                   <FileText className="w-8 h-8 sm:w-10 sm:h-10 text-green-500 dark:text-green-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">1. Describe</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  1. Describe
+                </h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Simply type what your form is about. For example, &quot;A job application form for a software engineer&quot;.
+                  Simply type what your form is about. For example, &quot;A job
+                  application form for a software engineer&quot;.
                 </p>
               </div>
               {/* Step 2 */}
@@ -190,9 +232,12 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-50 dark:bg-emerald-900/20 rounded-full flex items-center justify-center mb-4">
                   <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-500 dark:text-emerald-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">2. Generate</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  2. Generate
+                </h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Our AI analyzes your request and instantly generates a complete, ready-to-use form with relevant fields.
+                  Our AI analyzes your request and instantly generates a
+                  complete, ready-to-use form with relevant fields.
                 </p>
               </div>
               {/* Step 3 */}
@@ -200,9 +245,12 @@ const LandingPage = ({ userId }: LandingPageProps) => {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 bg-teal-50 dark:bg-teal-900/20 rounded-full flex items-center justify-center mb-4">
                   <Share2 className="w-8 h-8 sm:w-10 sm:h-10 text-teal-500 dark:text-teal-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">3. Share</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  3. Share
+                </h3>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                  Publish your form and share it with a unique link. Start collecting submissions right away.
+                  Publish your form and share it with a unique link. Start
+                  collecting submissions right away.
                 </p>
               </div>
             </div>
@@ -212,20 +260,36 @@ const LandingPage = ({ userId }: LandingPageProps) => {
           <div className="bg-green-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 mb-12 sm:mb-16 md:mb-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center text-white">
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">1k+</div>
-                <div className="text-xs sm:text-sm md:text-base text-green-50">Forms Created</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
+                  1k+
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-green-50">
+                  Forms Created
+                </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">500+</div>
-                <div className="text-xs sm:text-sm md:text-base text-green-50">Happy Users</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
+                  500+
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-green-50">
+                  Happy Users
+                </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">99.9%</div>
-                <div className="text-xs sm:text-sm md:text-base text-green-50">Uptime</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
+                  99.9%
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-green-50">
+                  Uptime
+                </div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">Max</div>
-                <div className="text-xs sm:text-sm md:text-base text-green-50">Support</div>
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-1 sm:mb-2">
+                  Max
+                </div>
+                <div className="text-xs sm:text-sm md:text-base text-green-50">
+                  Support
+                </div>
               </div>
             </div>
           </div>
@@ -242,62 +306,87 @@ const LandingPage = ({ userId }: LandingPageProps) => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-              <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20">
+              <div className="p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/20">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-green-400 text-green-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-green-400 text-green-400"
+                    />
                   ))}
                 </div>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">
-                  &quot;GenForm has revolutionized how we create forms. The AI generation is incredibly accurate and saves us hours of work!&quot;
+                  &quot;GenForm has revolutionized how we create forms. The AI
+                  generation is incredibly accurate and saves us hours of
+                  work!&quot;
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     MR
                   </div>
                   <div>
-                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">Micheal Ross</div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Product Manager</div>
+                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">
+                      Micheal Ross
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                      Product Manager
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20">
+              <div className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/20">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-emerald-400 text-emerald-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-emerald-400 text-emerald-400"
+                    />
                   ))}
                 </div>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">
-                  &quot;The sharing features are amazing! I can share my forms on WhatsApp, LinkedIn, and more with just one click.&quot;
+                  &quot;The sharing features are amazing! I can share my forms
+                  on WhatsApp, LinkedIn, and more with just one click.&quot;
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     TH
                   </div>
                   <div>
-                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">Tarry Hanie</div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Marketing Director</div>
+                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">
+                      Tarry Hanie
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                      Marketing Director
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20">
+              <div className="p-6 sm:p-8 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/20">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-teal-400 text-teal-400" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-teal-400 text-teal-400"
+                    />
                   ))}
                 </div>
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4">
-                  &quot;Best form builder I&apos;ve used. Clean interface, powerful features, and excellent analytics dashboard.&quot;
+                  &quot;Best form builder I&apos;ve used. Clean interface,
+                  powerful features, and excellent analytics dashboard.&quot;
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
                     SD
                   </div>
                   <div>
-                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">Soudip Das</div>
-                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Business Owner</div>
+                    <div className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white">
+                      Soudip Das
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                      Business Owner
+                    </div>
                   </div>
                 </div>
               </div>
@@ -313,37 +402,76 @@ const LandingPage = ({ userId }: LandingPageProps) => {
             </h2>
           </div>
           <div className="space-y-4">
-            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 cursor-pointer">
+            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40 cursor-pointer">
               <summary className="flex items-center justify-between font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
                 How many forms can I create?
                 <span className="transform transition-transform duration-300 group-open:rotate-180">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </span>
               </summary>
               <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                With our free plan, you can create up to 3 forms with AI. If you need more, our Pro plan offers unlimited AI-powered form creation. You can create unlimited manual forms on any plan.
+                With our free plan, you can create up to 3 forms with AI. If you
+                need more, our Pro plan offers unlimited AI-powered form
+                creation. You can create unlimited manual forms on any plan.
               </p>
             </details>
-            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 cursor-pointer">
+            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40 cursor-pointer">
               <summary className="flex items-center justify-between font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
                 Can I customize the forms?
                 <span className="transform transition-transform duration-300 group-open:rotate-180">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </span>
               </summary>
               <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                Absolutely! After the AI generates your form, you have full control to edit, add, remove, and reorder fields. You can also customize the title and description.
+                Absolutely! After the AI generates your form, you have full
+                control to edit, add, remove, and reorder fields. You can also
+                customize the title and description.
               </p>
             </details>
-            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/20 cursor-pointer">
+            <details className="group p-4 sm:p-6 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200 dark:border-gray-700/40 cursor-pointer">
               <summary className="flex items-center justify-between font-semibold text-sm sm:text-base text-gray-900 dark:text-white">
                 How do I see the submissions?
                 <span className="transform transition-transform duration-300 group-open:rotate-180">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6" /></svg>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </span>
               </summary>
               <p className="mt-3 sm:mt-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
-                All submissions for your forms are available in your dashboard. You can view individual submissions and see an overview in the analytics section.
+                All submissions for your forms are available in your dashboard.
+                You can view individual submissions and see an overview in the
+                analytics section.
               </p>
             </details>
           </div>
@@ -355,8 +483,8 @@ const LandingPage = ({ userId }: LandingPageProps) => {
         </div>
 
         {/* CTA Section */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
-          <div className="bg-green-500 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-center shadow-2xl shadow-green-500/20">
+        <div className="relative z-10 py-12 sm:py-16 md:py-20">
+          <div className="bg-green-500  p-6 sm:p-10 md:p-12 text-center shadow-2xl shadow-green-500/20">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
               Ready to Get Started?
             </h2>
@@ -364,8 +492,13 @@ const LandingPage = ({ userId }: LandingPageProps) => {
               Join thousands of users creating amazing forms with AI
             </p>
             <Link href="/sign-up" className="inline-block w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-green-600 hover:bg-gray-50 px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base md:text-lg font-semibold shadow-xl">
-                <span className="hidden sm:inline">Create Your First Form - It&apos;s Free</span>
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-white text-green-600 hover:bg-gray-50 px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base md:text-lg font-semibold shadow-xl"
+              >
+                <span className="hidden sm:inline">
+                  Create Your First Form - It&apos;s Free
+                </span>
                 <span className="sm:hidden">Get Started Free</span>
                 <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
