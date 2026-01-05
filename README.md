@@ -14,6 +14,29 @@
 </div>
 
 ---
+## 🤝 Contributors
+
+We ❤️ our contributors!  
+GenForm proudly participates in **SWOC**, and we appreciate everyone who contributes to this project.
+
+### 🌟 SWOC Contributors 2026
+
+<!-- Add your name below once your PR is merged -->
+
+🔹 **Aman Singh** — [@Amansingh0807](https://github.com/Amansingh0807)
+🔹 **Kenneth Jerome Fernandes** — [@KennethJF23](http://github.com/KennethJF23)
+🔹 **Shihab Hasan** — [@shihabhasan0161](https://github.com/shihabhasan0161)
+🔹 **Prabuddha Narayan Datta** — [@prabuddhaxdev](https://github.com/prabuddhaxdev)
+🔹 **David Pratama** — [@daviddprtma](https://github.com/daviddprtma)
+🔹 **Archita Agrawal** — [@ArchitaAgrawal912](https://github.com/ArchitaAgrawal912)
+🔹 **Nitya Gattu** — [@NITYANIT](https://github.com/NITYANIT)
+
+> ℹ️ **Contributor Instructions**  
+> • Contributors do not have direct edit access  
+> • Please add your name **only after your PR is merged**  
+> • Follow the same format to keep the list clean
+
+---
 
 ## 🌟 Overview
 
