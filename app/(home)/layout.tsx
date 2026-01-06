@@ -1,7 +1,7 @@
 import { DarkMode } from "@/components/DarkMode";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription, SheetClose } from "@/components/ui/sheet";
 import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { Menu } from "lucide-react";
@@ -71,13 +71,38 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
                 </Button>
               </SheetTrigger>
               <SheetContent>
-                <SheetHeader>
-                  <SheetTitle>Menu</SheetTitle>
-                  <SheetDescription>
-                    Navigation menu
-                  </SheetDescription>
-                </SheetHeader>
+
                 <div className="flex flex-col gap-4 mt-8">
+
+                  {/* Mobile Nav - Common Links */}
+                  <div className="flex flex-col gap-2 border-b pb-4">
+                    <SheetClose asChild>
+                      <Link href="#home" className="text-sm font-medium px-4 py-2 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                        Home
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link href="#features" className="text-sm font-medium px-4 py-2 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                        Features
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link href="#testimonials" className="text-sm font-medium px-4 py-2 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                        Testimonials
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link href="#faqs" className="text-sm font-medium px-4 py-2 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                        FAQs
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link href="#pricing" className="text-sm font-medium px-4 py-2 hover:bg-accent hover:text-accent-foreground rounded-md transition-colors">
+                        Pricing
+                      </Link>
+                    </SheetClose>
+                  </div>
+
                   {user ? (
                     <>
                       <Link href={"/dashboard/analytics"}>
