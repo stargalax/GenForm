@@ -169,6 +169,7 @@ Here’s a quick look at how the repository is organized:
 ├── postcss.config.mjs      # PostCSS config
 ├── tailwind.config.ts      # Tailwind CSS config
 └── tsconfig.json           # TypeScript config
+```
 
 ---
 
