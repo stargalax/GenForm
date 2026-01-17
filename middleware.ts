@@ -13,7 +13,7 @@ const redis = new Redis({
 // FIXED: Set to 10 requests per 10 minutes to match PR description
 const ratelimit = new Ratelimit({
   redis: redis,
-  limiter: Ratelimit.slidingWindow(10, "10 m"), 
+  limiter: Ratelimit.slidingWindow(10, "10 m"),
   analytics: true,
 });
 
@@ -22,7 +22,7 @@ export default clerkMiddleware(async (auth, req) => {
   if (req.nextUrl.pathname.startsWith("/api/generate")) {
     // Extract real IP (handles Vercel/Cloudflare proxies)
     const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
-    
+
     const { success, limit, reset, remaining } = await ratelimit.limit(ip);
 
     // If limit exceeded, return 429 immediately
