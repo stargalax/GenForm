@@ -17,25 +17,98 @@
 ## 🤝 Contributors
 
 We ❤️ our contributors!  
-GenForm proudly participates in **SWOC**, and we appreciate everyone who contributes to this project.
+GenForm proudly participates in **SWOC'26**, and we appreciate everyone who contributes to this project.
 
-### 🌟 SWOC Contributors 2026
+### 🌟 Contributors 
 
 <!-- Add your name below once your PR is merged -->
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Amansingh0807"><img src="https://github.com/Amansingh0807.png" width="100px;" alt=""/><br /><sub><b>Aman Singh</b></sub></a></td>
-    <td align="center"><a href="https://github.com/KennethJF23"><img src="https://github.com/KennethJF23.png" width="100px;" alt=""/><br /><sub><b>Kenneth Jerome Fernandes</b></sub></a></td>
-    <td align="center"><a href="https://github.com/shihabhasan0161"><img src="https://github.com/shihabhasan0161.png" width="100px;" alt=""/><br /><sub><b>Shihab Hasan</b></sub></a></td>
-    <td align="center"><a href="https://github.com/prabuddhaxdev"><img src="https://github.com/prabuddhaxdev.png" width="100px;" alt=""/><br /><sub><b>Prabuddha Narayan Datta</b></sub></a></td>
-    <td align="center"><a href="https://github.com/daviddprtma"><img src="https://github.com/daviddprtma.png" width="100px;" alt=""/><br /><sub><b>David Pratama</b></sub></a></td>
-    <td align="center"><a href="https://github.com/ArchitaAgrawal912"><img src="https://github.com/ArchitaAgrawal912.png" width="100px;" alt=""/><br /><sub><b>Archita Agrawal</b></sub></a></td>
-    <td align="center"><a href="https://github.com/NITYANIT"><img src="https://github.com/NITYANIT.png" width="100px;" alt=""/><br /><sub><b>Nitya Gattu</b></sub></a></td>
+    <td align="center">
+      <a href="https://github.com/Amansingh0807">
+        <img src="https://github.com/Amansingh0807.png" width="100px;" /><br />
+        <sub><b>Aman Singh</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/thec0deSage">
+        <img src="https://github.com/thec0deSage.png" width="100px;" /><br />
+        <sub><b>Takunda Lennox J Galanje</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/stargalax">
+        <img src="https://github.com/stargalax.png" width="100px;" /><br />
+        <sub><b>Nikitha</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/KennethJF23">
+        <img src="https://github.com/KennethJF23.png" width="100px;" /><br />
+        <sub><b>Kenneth Jerome Fernandes</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/shihabhasan0161">
+        <img src="https://github.com/shihabhasan0161.png" width="100px;" /><br />
+        <sub><b>Shihab Hasan</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/prabuddhaxdev">
+        <img src="https://github.com/prabuddhaxdev.png" width="100px;" /><br />
+        <sub><b>Prabuddha Narayan Datta</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/daviddprtma">
+        <img src="https://github.com/daviddprtma.png" width="100px;" /><br />
+        <sub><b>David Pratama</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ArchitaAgrawal912">
+        <img src="https://github.com/ArchitaAgrawal912.png" width="100px;" /><br />
+        <sub><b>Archita Agrawal</b></sub>
+      </a>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <a href="https://github.com/NITYANIT">
+        <img src="https://github.com/NITYANIT.png" width="100px;" /><br />
+        <sub><b>Nitya Gattu</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/StephanosNikitis">
+        <img src="https://github.com/StephanosNikitis.png" width="100px;" /><br />
+        <sub><b>Shaurya Singh</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Wish0604">
+        <img src="https://github.com/Wish0604.png" width="100px;" /><br />
+        <sub><b>Vishwanath Patre</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/shatrughantwt">
+        <img src="https://github.com/shatrughantwt.png" width="100px;" /><br />
+        <sub><b>Shatrughan</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/roshankumar0036singh">
+        <img src="https://github.com/roshankumar0036singh.png" width="100px;" /><br />
+        <sub><b>Roshan Kumar Singh</b></sub>
+      </a>
+    </td>
   </tr>
 </table>
 
-Want to see your name here? Make a contribution and open a PR 🚀
 ---
 
 ## 🌟 Overview
@@ -134,6 +207,42 @@ Want to see your name here? Make a contribution and open a PR 🚀
 - **Package Manager** - npm
 - **Build Tool** - Turbopack
 - **Code Quality** - ESLint
+
+---
+## 📁 Project Structure
+
+Here’s a quick look at how the repository is organized:
+
+```text
+📁 Project Structure
+├── .github/                # GitHub workflows & configs
+├── app/                    # Next.js App Router pages & layouts
+├── components/             # UI components
+├── hooks/                  # Custom React hooks
+├── lib/                    # Utility modules & helpers
+├── prisma/                 # Database schema & migrations
+├── public/                 # Public assets (images, etc.)
+├── types/                  # TypeScript type definitions
+├── .editorconfig           # Editor config rules
+├── .gitignore              # Git ignore rules
+├── .hintrc                 # Linter configuration
+├── .prettierrc             # Prettier config
+├── CODE_OF_CONDUCT.md      # Contributor guidelines
+├── CONTRIBUTING.md         # Contribution guide
+├── LEARN.md                # Learning doc / usage tips
+├── LICENSE                 # MIT License
+├── README.md               # Project overview & instructions
+├── SECURITY.md             # Security policy
+├── components.json         # Shadcn UI component config
+├── eslint.config.mjs       # ESLint config
+├── middleware.ts           # Next.js middleware
+├── next.config.ts          # Next.js config
+├── package.json            # Dependencies & scripts
+├── package-lock.json       # Locked dependencies
+├── postcss.config.mjs      # PostCSS config
+├── tailwind.config.ts      # Tailwind CSS config
+└── tsconfig.json           # TypeScript config
+```
 
 ---
 
