@@ -1,0 +1,86 @@
+{
+  "id": "volunteer_basic_1",
+  "category": "Volunteer",
+  "name": "Volunteer Registration Form",
+  "description": "Comprehensive form for NGOs, clubs, or open-source communities to onboard volunteers.",
+  "content": {
+    "formTitle": "Volunteer Registration Form",
+    "formDescription": "Join our community! Please fill out this form to help us understand your skills and how you'd like to contribute.",
+    "formFields": [
+      {
+        "id": "volunteer-name",
+        "name": "full_name",
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "id": "volunteer-email",
+        "name": "email",
+        "label": "Email Address",
+        "placeholder": "your.email@example.com",
+        "type": "email",
+        "required": true
+      },
+      {
+        "id": "volunteer-interests",
+        "name": "areas_of_interest",
+        "label": "Areas of Interest",
+        "placeholder": "Select your interests",
+        "type": "select",
+        "options": [
+          "Event Management", 
+          "Content Writing", 
+          "Technical/Coding", 
+          "Graphic Design", 
+          "Social Media Marketing", 
+          "Community Outreach",
+          "Public Relations"
+        ],
+        "required": true
+      },
+      {
+        "id": "volunteer-skills",
+        "name": "skills",
+        "label": "Relevant Skills",
+        "placeholder": "e.g., Python, Public Speaking, Video Editing, React",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "id": "volunteer-portfolio",
+        "name": "portfolio_link",
+        "label": "Portfolio or Profile Link (GitHub/LinkedIn/Behance)",
+        "placeholder": "https://github.com/yourusername",
+        "type": "url",
+        "required": false
+      },
+      {
+        "id": "volunteer-availability",
+        "name": "availability",
+        "label": "Availability",
+        "placeholder": "Select your availability",
+        "type": "select",
+        "options": ["Weekdays", "Weekends", "Evenings only", "Flexible"],
+        "required": true
+      },
+      {
+        "id": "volunteer-experience",
+        "name": "past_experience",
+        "label": "Past Volunteering/Experience",
+        "placeholder": "Describe any previous work with NGOs, clubs, or open-source projects",
+        "type": "textarea",
+        "required": false
+      },
+      {
+        "id": "volunteer-motivation",
+        "name": "motivation",
+        "label": "Why do you want to join us?",
+        "placeholder": "Tell us what inspires you to volunteer with our community",
+        "type": "textarea",
+        "required": true
+      }
+    ]
+  }
+}

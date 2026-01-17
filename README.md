@@ -25,26 +25,114 @@ GenForm proudly participates in **SWOC**, and we appreciate everyone who contrib
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Amansingh0807"><img src="https://github.com/Amansingh0807.png" width="100px;" alt=""/><br /><sub><b>Aman Singh</b></sub></a></td>
-    <td align="center"><a href="https://github.com/thec0deSage"><img src="https://github.com/thec0deSage.png" width="100px;" alt=""/><br /><sub><b>Takunda Lennox J Galanje
-     </b></sub></a></td>
-     <td align="center"><a href="https://github.com/stargalax"><img src="https://github.com/stargalax.png" width="100px;" alt=""/><br /><sub><b>Nikitha</b></sub></a></td>
-     <td align="center"><a href="https://github.com/KennethJF23"><img src="https://github.com/KennethJF23.png" width="100px;" alt=""/><br /><sub><b>Kenneth Jerome Fernandes</b></sub></a></td>
-     <td align="center"><a href="https://github.com/shihabhasan0161"><img src="https://github.com/shihabhasan0161.png" width="100px;" alt=""/><br /><sub><b>Shihab Hasan</b></sub></a></td>
-     <td align="center"><a href="https://github.com/prabuddhaxdev"><img src="https://github.com/prabuddhaxdev.png" width="100px;" alt=""/><br /><sub><b>Prabuddha Narayan Datta</b></sub></a></td>
-     <td align="center"><a href="https://github.com/daviddprtma"><img src="https://github.com/daviddprtma.png" width="100px;" alt=""/><br /><sub><b>David Pratama</b></sub></a></td>
-    </tr>
+    <td align="center">
+      <a href="https://github.com/Amansingh0807">
+        <img src="https://github.com/Amansingh0807.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Aman Singh</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/thec0deSage">
+        <img src="https://github.com/thec0deSage.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Takunda Lennox J Galanje</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/stargalax">
+        <img src="https://github.com/stargalax.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Nikitha</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/KennethJF23">
+        <img src="https://github.com/KennethJF23.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Kenneth Jerome Fernandes</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/shihabhasan0161">
+        <img src="https://github.com/shihabhasan0161.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Shihab Hasan</b></sub>
+      </a>
+    </td>
+  </tr>
 
   <tr>
-  <td align="center"><a href="https://github.com/ArchitaAgrawal912"><img src="https://github.com/ArchitaAgrawal912.png" width="100px;" alt=""/><br /><sub><b>Archita Agrawal</b></sub></a></td>
-  <td align="center"><a href="https://github.com/NITYANIT"><img src="https://github.com/NITYANIT.png" width="100px;" alt=""/><br /><sub><b>Nitya Gattu</b></sub></a></td>
-   <td align="center"><a href="https://github.com/StephanosNikitis"><img src="https://github.com/StephanosNikitis.png" width="100px;" alt=""/><br /><sub><b>Shaurya Singh</b></sub></a></td>
-   <td align="center"><a href="https://github.com/Wish0604"><img src="https://github.com/Wish0604.png" width="100px;" alt=""/><br /><sub><b>Vishwanath Patre</b></sub></a></td>
-     <td align="center"><a href="https://github.com/shatrughantwt"><img src="https://github.com/shatrughantwt.png" width="100px;" alt=""/><br /><sub><b>Shatrughan</b></sub></a></td>
+    <td align="center">
+      <a href="https://github.com/prabuddhaxdev">
+        <img src="https://github.com/prabuddhaxdev.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Prabuddha Narayan Datta</b></sub>
+      </a>
+    </td>
 
+    <td align="center">
+      <a href="https://github.com/daviddprtma">
+        <img src="https://github.com/daviddprtma.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>David Pratama</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/ArchitaAgrawal912">
+        <img src="https://github.com/ArchitaAgrawal912.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Archita Agrawal</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/NITYANIT">
+        <img src="https://github.com/NITYANIT.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Nitya Gattu</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/StephanosNikitis">
+        <img src="https://github.com/StephanosNikitis.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Shaurya Singh</b></sub>
+      </a>
+    </td>
   </tr>
-  
-   
+
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Wish0604">
+        <img src="https://github.com/Wish0604.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Vishwanath Patre</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/shatrughantwt">
+        <img src="https://github.com/shatrughantwt.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Shatrughan</b></sub>
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/roshankumar0036singh">
+        <img src="https://github.com/roshankumar0036singh.png" width="100px;" alt=""/>
+        <br />
+        <sub><b>Roshan Kumar Singh</b></sub>
+      </a>
+    </td>
+  </tr>
 </table>
 
 Want to see your name here? Make a contribution and open a PR 🚀
