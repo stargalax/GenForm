@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/theme-provider";
 import {Toaster} from "react-hot-toast"
 import { Analytics } from '@vercel/analytics/next';
+import BackToTopButton from "@/components/ui/back-to-top";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -62,6 +63,7 @@ export default function RootLayout({
             {children}
             <Analytics />
             <Toaster/>
+            <BackToTopButton />
           </ThemeProvider>
         </body>
       </html>
