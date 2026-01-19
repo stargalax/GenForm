@@ -6,7 +6,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <SidebarProvider>
       <DashboardSidebar />
-      <main className="mx-6 my-4 w-full">{children}</main>
+      <main className="mx-6 my-4 w-full pt-20 md:pt-0">{children}</main>
     </SidebarProvider>
   );
 };
