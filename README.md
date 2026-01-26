@@ -94,16 +94,47 @@ GenForm proudly participates in **SWOC'26**, and we appreciate everyone who cont
         <sub><b>Vishwanath Patre</b></sub>
       </a>
     </td>
-    <td align="center">
+        <td align="center">
       <a href="https://github.com/shatrughantwt">
         <img src="https://github.com/shatrughantwt.png" width="100px;" /><br />
         <sub><b>Shatrughan</b></sub>
       </a>
-    </td>
+      </td>
     <td align="center">
       <a href="https://github.com/roshankumar0036singh">
         <img src="https://github.com/roshankumar0036singh.png" width="100px;" /><br />
         <sub><b>Roshan Kumar Singh</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/yash-mhetras">
+        <img src="https://github.com/yash-mhetras.png" width="100px;" /><br />
+        <sub><b>Yash Mhetras</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ManabBiswas">
+        <img src="https://github.com/ManabBiswas.png" width="100px;" /><br />
+        <sub><b>Manab Biswas</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/SudharsanSaravanan">
+        <img src="https://github.com/SudharsanSaravanan.png" width="100px;" /><br />
+        <sub><b>Sudharsana Saravanan S</b></sub>
+      </a>
+    </td>
+  </tr>
+  <tr>
+      <td align="center">
+      <a href="https://github.com/Trapti10">
+        <img src="https://github.com/Trapti10.png" width="100px;" /><br />
+        <sub><b>Trapti Vishwakarma</b></sub>
+      </a>
+      <td align="center">
+      <a href="https://github.com/k4rth1k-h3gd3">
+        <img src="https://github.com/k4rth1k-h3gd3.png" width="100px;" /><br />
+        <sub><b>Karthik Hegde</b></sub>
       </a>
     </td>
   </tr>
