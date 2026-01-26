@@ -4,14 +4,19 @@
 
 ### Transform Ideas into Beautiful Forms in Seconds
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://genformai-kappa.vercel.app/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Next.js](https://img.shields.io/badge/Next.js-15.1.4-black)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg?style=for-the-badge&logo=vercel)](https://genformai-kappa.vercel.app/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![SWOC 2026](https://img.shields.io/badge/SWOC-2026-orange?style=for-the-badge)](https://swoc.tech/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/Amansingh0807/GenForm/pulls)
 
 [Live Demo](https://genformai-kappa.vercel.app/) • [Report Bug](https://github.com/Amansingh0807/GenForm/issues) • [Request Feature](https://github.com/Amansingh0807/GenForm/issues)
 
 </div>
+
+---
+
+## 📍 Jump To
+[**✨ Features**](#-key-features) • [**🛠️ Technology Stack**](#technology-stack) • [**🚀 Getting Started**](#-getting-started) • [**🤝 Contributors**](#-contributors)
 
 ---
 ## 🤝 Contributors
@@ -138,7 +143,12 @@ GenForm proudly participates in **SWOC'26**, and we appreciate everyone who cont
         <sub><b>Karthik Hegde</b></sub>
       </a>
     </td>
-  </tr>
+  <td align="center">
+      <a href="https://github.com/Nitya-003">
+        <img src="https://github.com/Nitya-003.png" width="100px;" /><br />
+        <sub><b>Nitya Gosain</b></sub>
+      </a>
+    </td>
 </table>
 
 ---
@@ -223,33 +233,15 @@ GenForm proudly participates in **SWOC'26**, and we appreciate everyone who cont
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
-### Frontend
-
-- **Framework** - Next.js 15.1.4 with App Router
-- **Language** - TypeScript 5.0
-- **Styling** - Tailwind CSS 3.4
-- **UI Components** - Shadcn/UI
-- **Icons** - Lucide React
-- **Rich Text** - React Quill (React 19 compatible)
-
-### Backend
-
-- **Runtime** - Node.js
-- **Database** - PostgreSQL (Supabase)
-- **ORM** - Prisma
-- **Authentication** - Clerk
-- **Payments** - Stripe
-- **AI** - Google Gemini API, Hugging Face Models
-
-### DevOps & Tools
-
-- **Hosting** - Vercel
-- **Version Control** - Git & GitHub
-- **Package Manager** - npm
-- **Build Tool** - Turbopack
-- **Code Quality** - ESLint
+| Category | Technology | Usage |
+| :--- | :--- | :--- |
+| **Frontend** | <img src="https://skillicons.dev/icons?i=nextjs" width="20"/> **Next.js 15** | App Router & Server Components |
+| **Language** | <img src="https://skillicons.dev/icons?i=ts" width="20"/> **TypeScript** | Type-safe Development |
+| **Styling** | <img src="https://skillicons.dev/icons?i=tailwind" width="20"/> **Tailwind CSS** | Modern UI & Responsive Design |
+| **Database** | <img src="https://skillicons.dev/icons?i=postgres" width="20"/> **PostgreSQL** | Relational data via Supabase |
+| **AI Engine** | <img src="https://skillicons.dev/icons?i=google" width="20"/> **Gemini API** | Natural Language Form Parsing |
 
 ---
 
@@ -394,7 +386,6 @@ Visit [http://localhost:3000](http://localhost:3000) 🎉
 ## 🎨 Features Showcase
 
 ### AI Form Generation
-
 ```
 User Input: "Create a job application form"
 
@@ -436,6 +427,8 @@ AI Output:
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 Please read our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before getting started.
+
+---
 
 ## 🛡️ Security
 
