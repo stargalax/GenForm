@@ -1,7 +1,10 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+
+// Define public routes that don't require authentication
+const isPublicRoute = createRouteMatcher(['/', '/sign-in(.*)', '/sign-up(.*)']);
 
 // Graceful Redis Initialization
 // This prevents crashes in CI/Build environments where env vars might be missing
@@ -63,9 +66,10 @@ export default clerkMiddleware(async (auth, req) => {
     }
   }
 
-  // 2. Clerk Authentication
-  // If rate limit passes (or it's not the generate route), we do nothing.
-  // Clerk's middleware automatically handles the rest.
+  // 2. Clerk Authentication - Protect non-public routes
+  if (!isPublicRoute(req)) {
+    await auth.protect();
+  }
 });
 
 // Standard Next.js + Clerk Matcher Config
